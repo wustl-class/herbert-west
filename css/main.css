@@ -52,9 +52,30 @@ footer {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #70bc4e;
+  /* Turns all direct children inside footer into flex items */
+  display: flex;
+  /* By default, all flex items lay out in a row left to right */
+  /* flex-direction: row */
+  /* Put a small gap between each flex item column */
+  column-gap: 1rem;
+}
+
+footer > section {
+  background-color: pink;
+  /* By default, all flex items shrink, which is equivalent to 1 */
+  /* flex-shrink: 1; */
+  /* By default, flex items don't grow; now they grow to fill up all additional space */
+  flex-grow: 1;
+  /* By default, flex items do not grow (or shrink) proportionally; not they all grow proportionally so they're all the same size */
+  flex-basis: 0;
 }
 
 footer svg {
   width: 50px;
   height: auto;
+}
+
+.social-media-icons {
+  display: flex;
+  column-gap: .5rem;
 }
